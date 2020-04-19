@@ -123,14 +123,14 @@ def winner
     end
 end
 
-# def play
-# !turn until over?
-#   if won?
-#     puts "Congratulations #{winner}!"
-#
-#   elsif draw? == true
-#     puts "Cat's Game!"
-#   else
-# end
-# end
+def play
+turn until over?
+  if won?
+    puts "Congratulations #{winner}!"
+
+  elsif draw? == true
+    puts "Cat's Game!"
+  else
+end
+end
 end
