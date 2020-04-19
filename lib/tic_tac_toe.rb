@@ -127,12 +127,12 @@ def play
  until over?
 turn
 end
-  if won?
-    puts "Congratulations #{winner}!"
-
-  elsif draw? == true
-    puts "Cat's Game!"
-  else
-end
+  # if won?
+  #   puts "Congratulations #{winner}!"
+  # 
+  # elsif draw? == true
+  #   puts "Cat's Game!"
+  # else
+# end
 end
 end
