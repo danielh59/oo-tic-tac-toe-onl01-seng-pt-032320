@@ -1,5 +1,5 @@
 class TicTacToe
-  
+
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -8,13 +8,13 @@ WIN_COMBINATIONS = [
   [1,4,7],
   [2,5,8],
   [0,4,8],
-  [6,4,2], 
+  [6,4,2],
   ]
 
 def initialize
     @board = Array.new(9, " ")
 end
- 
+
 def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -22,14 +22,14 @@ def display_board
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-  
+
   def input_to_index(string)
 string.to_i - 1
-  end 
+  end
 
   def move(index_on_board, token = "X")
-  @board[index_on_board] = token 
-  end 
+  @board[index_on_board] = token
+  end
 
 def position_taken?(index)
    if @board[index] == " "
@@ -37,8 +37,8 @@ def position_taken?(index)
    else
      true
    end
- end 
- 
+ end
+
 def valid_move?(index)
 !position_taken?(index) && index.between?(0,8)
 end
@@ -49,8 +49,8 @@ def turn_count
     if index_space == 'X' || index_space =='O'
       count += 1
     else
-    end 
-end 
+    end
+end
 count
 end
 
@@ -80,12 +80,12 @@ def won?
       win_index_1 = win_combination[0]
       win_index_2 = win_combination[1]
       win_index_3 = win_combination[2]
-      
+
       position_1 = @board[win_index_1]
       position_2 = @board[win_index_2]
       position_3 = @board[win_index_3]
-      
-      if position_1 == "X" && position_2 == "X" && position_3 == "X" 
+
+      if position_1 == "X" && position_2 == "X" && position_3 == "X"
         return win_combination
         elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
         return win_combination
@@ -93,25 +93,25 @@ def won?
     end
     false
   end
-  
+
   def full?
     if @board.all? {|i| i == "X" || i == "O"}
       return true
     end
   end
   def draw?
-    if full? == true && won? == false 
-      return true 
+    if full? == true && won? == false
+      return true
     else false
-  end 
-end 
+  end
+end
 
 def over?
-  if full? == true || won? == true 
-    return true 
-end 
+  if full? == true || won? == true
+    return true
+end
 puts "Game is completed!"
-end 
+end
 
 def winner
     if won? == false
@@ -121,18 +121,18 @@ def winner
     else
       return "O"
     end
-end 
+end
 
 def play
 !turn until over?
   if won?
     puts "Congratulations #{winner}!"
-   
+
   elsif draw? == true
     puts "Cat's Game!"
-  else 
+  else
 end
 end
-end 
- 
+end
+
  
