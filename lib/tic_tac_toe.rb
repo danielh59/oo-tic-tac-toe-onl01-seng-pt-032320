@@ -126,7 +126,7 @@ end
 def play
  until over?
 turn
-end 
+end
   if won?
     puts "Congratulations #{winner}!"
 
