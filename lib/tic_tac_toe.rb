@@ -108,7 +108,7 @@ def won?
 end
 
 def over?
-  if draw? || won? == true
+  if draw? || won? 
     return true
 end
 end
