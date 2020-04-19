@@ -99,18 +99,18 @@ def won?
       return true
     end
   end
+  
   def draw?
-    if full? == true && won? == false
+    if full? && !won? 
       return true
     else false
   end
 end
 
 def over?
-  if full? == true || won? == true
+  if draw? || won? == true
     return true
 end
-puts "Game is completed!"
 end
 
 def winner
@@ -123,16 +123,16 @@ def winner
     end
 end
 
-def play
-!turn until over?
-  if won?
-    puts "Congratulations #{winner}!"
-
-  elsif draw? == true
-    puts "Cat's Game!"
-  else
-end
-end
+# def play
+# !turn until over?
+#   if won?
+#     puts "Congratulations #{winner}!"
+# 
+#   elsif draw? == true
+#     puts "Cat's Game!"
+#   else
+# end
+# end
 end
 
  
